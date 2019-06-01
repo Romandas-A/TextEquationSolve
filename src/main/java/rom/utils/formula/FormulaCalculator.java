@@ -11,12 +11,11 @@ public class FormulaCalculator {
     public String calc(String formulaStr) {
 
         List<FormulaElement> elements = new StringFormulaParser().parse(formulaStr);
-        
+
         new FormulaElementsValidator().validate(elements);
 
-        elements=new FormulaSimplifier().simplify(elements);
-        
-        
+        elements = new FormulaSimplifier().simplify(elements);
+
         return elementsToString(elements);
     }
 

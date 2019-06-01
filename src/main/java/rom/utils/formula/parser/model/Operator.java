@@ -1,4 +1,5 @@
 package rom.utils.formula.parser.model;
+
 import rom.utils.formula.parser.model.enums.OperatorType;
 import org.apache.commons.lang3.StringUtils;
 
