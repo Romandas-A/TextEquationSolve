@@ -1,12 +1,11 @@
-package pojo;
-
+package rom.utils.formula.parser.model;
 import org.apache.commons.lang3.StringUtils;
 
-public class Oprd {
+public class Operand implements FormulaElement {
 
     private String value;
 
-    public Oprd(String value) {
+    public Operand(String value) {
         this.value = value;
     }
 
