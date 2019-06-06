@@ -6,4 +6,8 @@ public class VariableOperand extends Operand {
         super(value);
     }
     
+    public VariableOperand(char value) {
+        super(""+value);
+    }
+    
 }

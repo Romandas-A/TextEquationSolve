@@ -3,25 +3,24 @@ package rom.utils.formula.main;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import rom.utils.formula.FormulaCalculator;
-import rom.utils.formula.parser.StringFormulaParser;
+import rom.utils.formula.parser.level01.strtoelem.Level01Parser;
 import rom.utils.formula.parser.model.FormulaElement;
 
 public class Main {
 
     //static String txtFormula = "(  (5+8)/3  +  5*2*sqrt(3)  ) +  n";
-    static String txtFormula = "(4876......897^2+5/sin(k))";
+    static String txtFormula = "(5)";//"(4876......897^2+5/sin(k)))(";
 
     public static void main(String[] args) {
 
-        FormulaCalculator k1 = new FormulaCalculator();
-        List<FormulaElement> elements = k1.calc(txtFormula);
+        FormulaCalculator k1 = new FormulaCalculator(txtFormula);
+        List<FormulaElement> elements = k1.calc();
 
         for (FormulaElement element : elements) {
             System.out.println(element.getClass().getSimpleName() + " " + element.getValue());
         }
 
-        
-       // System.out.println(StringUtils.isNumeric(new StringFormulaParser().parse(formula)));
+        // System.out.println(StringUtils.isNumeric(new Level01Parser().parse(formula)));
     }
 
 }

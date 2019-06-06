@@ -6,4 +6,8 @@ public class NumberOperand extends Operand{
         super(value);
     }
     
+    public NumberOperand(char value) {
+        super(""+value);
+    }
+    
 }

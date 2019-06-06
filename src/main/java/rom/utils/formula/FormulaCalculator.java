@@ -1,24 +1,38 @@
 package rom.utils.formula;
 
+import java.util.ArrayList;
 import java.util.List;
-import rom.utils.formula.parser.FormulaElementsValidator;
-import rom.utils.formula.parser.FormulaSimplifier;
-import rom.utils.formula.parser.StringFormulaParser;
+import rom.utils.formula.parser.FormulaElementsParser;
+import rom.utils.formula.parser.level01.strtoelem.Level01Parser;
+import rom.utils.formula.parser.level02.Level02Parser;
 import rom.utils.formula.parser.model.FormulaElement;
 
 public class FormulaCalculator {
 
-    public List<FormulaElement> calc(String formulaStr) {
+    private List<FormulaElementsParser> parsers;
 
-        List<FormulaElement> elements = new StringFormulaParser().parse(formulaStr);
+    public FormulaCalculator(String formula) {
 
-        new FormulaElementsValidator().validate(elements);
+        parsers = new ArrayList<>();
+        parsers.add(new Level01Parser(formula));
+        parsers.add(new Level02Parser());
 
-        return new FormulaSimplifier().simplify(elements);
+    }
+
+    public List<FormulaElement> calc() {
+
+        List<FormulaElement> elem = new ArrayList<>();
+
+        for (FormulaElementsParser parser : parsers) {
+
+            elem = parser.parse(elem);
+            parser.validate(elem);
+        }
+
+        return elem;
     }
 
 //    private String elementsToString(List<FormulaElement> elements) {
 //        return "bet kas";
 //    }
-
 }

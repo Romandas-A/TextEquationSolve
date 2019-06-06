@@ -9,6 +9,10 @@ public class Operator implements FormulaElement {
     public Operator(String value) {
         this.value = OperatorType.operatorParser(value);
     }
+    
+     public Operator(char value) {
+        this.value = OperatorType.operatorParser(""+value);
+    }
 
     public OperatorType getOperatorValue() {
         return value;
