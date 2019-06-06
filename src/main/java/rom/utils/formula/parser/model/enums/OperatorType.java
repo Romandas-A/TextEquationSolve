@@ -14,7 +14,7 @@ public enum OperatorType {
         return opSymbol;
     }
 
-    public OperatorType operatorParser(String symbol) {
+    public static OperatorType operatorParser(String symbol) {
 
         for (OperatorType value : OperatorType.values()) {
             if (value.getOpSymbol().equals(symbol)) {
@@ -24,5 +24,5 @@ public enum OperatorType {
 
         return null;
     }
-
 }
+

@@ -8,19 +8,17 @@ import rom.utils.formula.parser.model.FormulaElement;
 
 public class FormulaCalculator {
 
-    public String calc(String formulaStr) {
+    public List<FormulaElement> calc(String formulaStr) {
 
         List<FormulaElement> elements = new StringFormulaParser().parse(formulaStr);
 
         new FormulaElementsValidator().validate(elements);
 
-        elements = new FormulaSimplifier().simplify(elements);
-
-        return elementsToString(elements);
+        return new FormulaSimplifier().simplify(elements);
     }
 
-    private String elementsToString(List<FormulaElement> elements) {
-        return "bet kas";
-    }
+//    private String elementsToString(List<FormulaElement> elements) {
+//        return "bet kas";
+//    }
 
 }

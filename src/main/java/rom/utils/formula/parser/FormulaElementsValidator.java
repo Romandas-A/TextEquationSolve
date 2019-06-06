@@ -7,5 +7,20 @@ public class FormulaElementsValidator {
 
     public void validate(List<FormulaElement> elem) {
 
+        validateBrackets(elem);
+
+        validateNumericOperand(elem);
+
+    }
+
+    StringFormulaParser k1 = new  StringFormulaParser();
+
+    private void validateBrackets(List<FormulaElement> elem) {
+        
+
+    }
+
+    private void validateNumericOperand(List<FormulaElement> elem) {
+
     }
 }

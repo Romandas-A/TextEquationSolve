@@ -16,4 +16,9 @@ public class Bracket implements FormulaElement {
         this.opening = opening;
     }
 
+    @Override
+    public String getValue() {
+        return opening?"(":")";
+    }
+
 }

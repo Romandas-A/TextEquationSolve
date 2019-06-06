@@ -1,18 +1,22 @@
 package rom.utils.formula.parser.model;
 
 import rom.utils.formula.parser.model.enums.OperatorType;
-import org.apache.commons.lang3.StringUtils;
 
 public class Operator implements FormulaElement {
 
     private OperatorType value;
 
     public Operator(String value) {
-        this.value = OperatorType.valueOf(value);
+        this.value = OperatorType.operatorParser(value);
     }
 
-    public OperatorType getValue() {
+    public OperatorType getOperatorValue() {
         return value;
+    }
+
+    @Override
+    public String getValue() {
+        return value.getOpSymbol();
     }
 
 }

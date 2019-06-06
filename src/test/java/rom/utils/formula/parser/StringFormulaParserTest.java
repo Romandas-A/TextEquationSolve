@@ -11,7 +11,8 @@ public class StringFormulaParserTest {
     @Test
     public void testParse() {
         StringFormulaParser parseTest = new StringFormulaParser();
-
-        Assert.assertEquals(null, parseTest.parse("(5+4)"));
+        Assert.assertEquals(null, parseTest.parse("("));
+        
+        
     }
 }

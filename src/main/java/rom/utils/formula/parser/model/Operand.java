@@ -2,7 +2,7 @@ package rom.utils.formula.parser.model;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class Operand implements FormulaElement {
+public abstract class Operand implements FormulaElement {
 
     private String value;
 
@@ -14,6 +14,7 @@ public class Operand implements FormulaElement {
         return StringUtils.isNumeric(value);
     }
 
+    @Override
     public String getValue() {
         return value;
     }
