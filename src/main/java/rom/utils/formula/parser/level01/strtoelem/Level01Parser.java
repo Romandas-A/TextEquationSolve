@@ -8,7 +8,6 @@ import rom.utils.formula.parser.model.FormulaElement;
 import rom.utils.formula.parser.model.NumberOperand;
 import rom.utils.formula.parser.model.Operator;
 import rom.utils.formula.parser.model.VariableOperand;
-import rom.utils.formula.parser.model.enums.ParserCharacterType;
 
 public class Level01Parser implements FormulaElementsParser {
 

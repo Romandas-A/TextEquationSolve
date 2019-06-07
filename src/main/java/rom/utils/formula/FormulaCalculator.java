@@ -32,7 +32,4 @@ public class FormulaCalculator {
         return elem;
     }
 
-//    private String elementsToString(List<FormulaElement> elements) {
-//        return "bet kas";
-//    }
 }

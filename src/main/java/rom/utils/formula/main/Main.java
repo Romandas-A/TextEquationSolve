@@ -1,9 +1,7 @@
 package rom.utils.formula.main;
 
 import java.util.List;
-import org.apache.commons.lang3.StringUtils;
 import rom.utils.formula.FormulaCalculator;
-import rom.utils.formula.parser.level01.strtoelem.Level01Parser;
 import rom.utils.formula.parser.model.FormulaElement;
 
 public class Main {
