@@ -19,6 +19,10 @@ public class FormulaCalculator {
 
     }
 
+    FormulaCalculator() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
     public List<FormulaElement> calc() {
 
         List<FormulaElement> elem = new ArrayList<>();

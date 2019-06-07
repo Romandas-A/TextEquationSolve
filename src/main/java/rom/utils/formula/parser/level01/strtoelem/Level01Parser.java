@@ -24,16 +24,14 @@ public class Level01Parser implements FormulaElementsParser {
         formula = formula.replaceAll("\\s", "");
 
         for (int i = 0; i < formula.length(); i++) {
-            result.add(createAtomicEmenet(formula.charAt(i)));
+            result.add(createAtomicElement(formula.charAt(i)));
         }
-
         return result;
     }
 
-    private FormulaElement createAtomicEmenet(char ch) {
+    private FormulaElement createAtomicElement(char ch) {
 
         switch (ch) {
-
             case '(':
                 return new Bracket(true);
             case ')':
@@ -58,7 +56,6 @@ public class Level01Parser implements FormulaElementsParser {
             case '/':
             case '^':
                 return new Operator(ch);
-
             default:
                 return new VariableOperand(ch);
         }

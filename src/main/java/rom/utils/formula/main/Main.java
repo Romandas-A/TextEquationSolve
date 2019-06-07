@@ -18,7 +18,6 @@ public class Main {
             System.out.println(element.getClass().getSimpleName() + " " + element.getValue());
         }
 
-        // System.out.println(StringUtils.isNumeric(new Level01Parser().parse(formula)));
     }
 
 }
